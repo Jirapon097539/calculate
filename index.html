@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>โปรแกรมคำนวณ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="top: 0; width: 100%;">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#cal">calculate</a>
+
+        <!-- Links -->
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#cal1"> การคำนวณเกรด</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#cal3">การคำนวณแคลอรี</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#cal4">การคำนวณภาษี</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#cal5">การคำนวณ BMI</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron text-center" id="cal">
+        <h3>การคำนวณสิ่งต่าง ๆ </h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p> การคำนวณ หรือ การคณนา สามารถนิยามได้ว่าเป็นการหาคำตอบของปัญหาจากข้อมูลป้อนเข้าโดยการใช้ขั้นตอนวิธี ศาสตร์ที่ศึกษาเกี่ยวกับเรื่องนี้คือ ทฤษฎีการคำนวณ ซึ่งเป็นสาขาย่อยของวิทยาการคอมพิวเตอร์และคณิตศาสตร์ เป็นเวลากว่าพันปีที่การคำนวณนั้นกระทำด้วยปากกาและกระดาษ หรือชอล์กและกระดานชนวน หรือด้วยการใช้สมอง</p>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron text-center" id="cal1">
+        <h3>การคำนวณเกรด</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <br><br><br><br><br>
+                    <form action="">
+                        <label>คะแนน:</label>
+                        <input type="text" class="form-control" id="score" placeholder="กรอกคะแนน">
+                        <br>
+                        <button type="button" class="btn btn-info" onclick="grade()">ตกลง</button>
+                        <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+
+                        <br>
+                        <br>
+                        <p id="showscore"></p>
+                        <p id="showgrade"></p>
+                    </form>
+
+                </div>
+                <div class="col-sm-6">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>คะแนน</th>
+                                <th>เกรด</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>80-100</td>
+                                <td>เกรด 4 </td>
+                            </tr>
+                            <tr>
+                                <td>75-79</td>
+                                <td>เกรด 3.5 </td>
+                            </tr>
+                            <tr>
+                                <td>70-74</td>
+                                <td>เกรด 3 </td>
+                            </tr>
+                            <tr>
+                                <td>65-69</td>
+                                <td>เกรด 2.5 </td>
+                            </tr>
+                            <tr>
+                                <td>60-64</td>
+                                <td>เกรด 2 </td>
+                            </tr>
+                            <tr>
+                                <td>55-59</td>
+                                <td>เกรด 1.5 </td>
+                            </tr>
+                            <tr>
+                                <td>50-54</td>
+                                <td>เกรด 1 </td>
+                            </tr>
+                            <tr>
+                                <td>1-49</td>
+                                <td>เกรดไม่ผ่านเกณฑ์</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron text-center" id="cal3">
+        <h3>การคำนวณแคลอรี</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form action="">
+                        <label for="male">ชาย:</label>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="female">หญิง:</label>
+                        <input type="radio" id="female" name="gender" value="female">
+
+                        <br>
+                        <label>น้ำหนัก:</label>
+                        <input type="text" class="form-control" id="weight" placeholder="กรอกน้ำหนัก">
+                        <br>
+                        <button type="button" class="btn btn-info" onclick="cal()">ตกลง</button>
+                        <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+                        <br>
+                        <br>
+                        <p id="showsex"></p>
+                        <p id="showweight"></p>
+                    </form>
+                </div>
+                <div class="col-sm-6">
+                    <br>
+                    <br>
+                    <p>ผู้ชาย = น้ำหนักตัว x 31 (โดยเฉลี่ยประมาณ 2,000 กิโลแคลอรี่)</p>
+                    <p>ผู้หญิง = น้ำหนักตัว x 27 (โดยเฉลี่ยประมาณ 1,600 กิโลแคลอรี่)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron text-center" id="cal4">
+        <h3>การคำนวณภาษี</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form action="">
+                        <label>เงินได้:</label>
+                        <input type="text" class="form-control" id="money" placeholder="กรอกเงินได้">
+                        <br>
+                        <label>ค่าใช้จ่าย:</label>
+                        <input type="text" class="form-control" id="cost" placeholder="กรอกค่าใช้จ่าย">
+                        <br>
+                        <label>ค่าลดหย่อน:</label>
+                        <input type="text" class="form-control" id="Deduction" placeholder="กรอกค่าลดหย่อน">
+                        <br>
+                        <button type="button" class="btn btn-info" onclick="salary()">รายได้สุทธิ</button>
+                        <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+                        <br>
+                        <br>
+                        <p id="showsalary"></p>
+
+                        <label>รายได้สุทธิ:</label>
+                        <input type="text" class="form-control" id="salary"
+                            placeholder="กรอกรายได้สุทธิ(ถ้าไม่ทราบกรุณาคำนวณข้างบน)">
+                        <br>
+                        <button type="button" class="btn btn-info" onclick="tax()">ตกลง</button>
+                        <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+                        <br>
+                        <br>
+                        <p id="showsalary1"></p>
+                        <p id="showtax"></p>
+                </div>
+                </form>
+                <div class="col-sm-6">
+                    <br>
+                    <br>
+                    <p>เงินได้ – ค่าใช้จ่าย – ค่าลดหย่อน = เงินได้สุทธิ</p>
+                    <p>เงินได้สุทธิ × อัตราภาษี = เงินภาษีที่ต้องจ่าย</p>
+                    <p>ค่าลดหย่อนส่วนบุคคล 30,000 บาท</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron text-center" id="cal5">
+        <h3>การคำนวณ BMI</h3>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <br><br><br>
+                    <form action="">
+                        <label>ส่วนสูง:</label>
+                        <input type="text" class="form-control" id="Height" placeholder="กรอกส่วนสูง">
+                        <label>น้ำหนัก:</label>
+                        <input type="text" class="form-control" id="wei" placeholder="กรอกน้ำหนัก">
+                        <br>
+                        <button type="button" class="btn btn-info" onclick="BMI()">ตกลง</button>
+                        <button type="reset" class="btn btn-danger">ล้างข้อมูล</button>
+                        <br>
+                        <br>
+                        <br>
+                        <p id="showBMI"></p>
+                        <p id="showtest"></p>
+                </div>
+                </form>
+
+
+                <div class="col-sm-6">
+                    <p>ดัชนีมวลกาย (BMI) = น้ำหนักตัว (kg) / ส่วนสูง(m) xส่วนสูง(m) </p>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th> BMI kg/m2</th>
+                                <th>อยู่ในเกณท์</th>
+                                <th>ภาวะเสี่ยงต่อโรค</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>น้อยกว่า 18.50</td>
+                                <td>น้ำหนักน้อย / ผอม</td>
+                                <td>มากกว่าคนปกติ</td>
+                            </tr>
+                            <tr>
+                                <td>ระหว่าง 18.50 - 22.90</td>
+                                <td>ปกติ (สุขภาพดี)</td>
+                                <td>เท่าคนปกติ</td>
+                            </tr>
+                            <tr>
+                                <td>ระหว่าง 23 - 24.90</td>
+                                <td>ท้วม / โรคอ้วนระดับ 1</td>
+                                <td>อันตรายระดับ 1</td>
+                            </tr>
+                            <tr>
+                                <td>ระหว่าง 25 - 29.90</td>
+                                <td>อ้วน / โรคอ้วนระดับ 2</td>
+                                <td>อันตรายระดับ 2</td>
+                            </tr>
+                            <tr>
+                                <td>มากกว่า 30</td>
+                                <td>อ้วนมาก / โรคอ้วนระดับ 3</td>
+                                <td>อันตรายระดับ 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="system.js"></script>
