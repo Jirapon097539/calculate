@@ -1,9 +1,9 @@
 
 # Calculate Project
 
-This project includes tools to calculate various values. Below are the features provided:
+โปรเจกต์นี้ประกอบด้วยเครื่องมือสำหรับการคำนวณค่าต่าง ๆ โดยมีฟีเจอร์ดังต่อไปนี้:
 
-## Features
+## รูปแบบ
 1. **การคำนวณเกรด**
    - เครื่องมือสำหรับคำนวณเกรดจากคะแนนที่ได้
 2. **การคำนวณแคลอรี**
